@@ -1,0 +1,22 @@
+
+
+/* //Give the css for adjust the button on the right side */
+.File-button {
+  position: absolute;
+  right: 0; 
+  top: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+
+/* Give the design for this button */
+.File-button {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,139 @@
+/* Upload container
+.upload-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    justify-content: center;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .upload-container input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .upload-container button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .upload-container button:hover {
+    background-color: #0056b3;
+  }
+
+
+  .Table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    }
+
+  .Table th,
+  .Table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #030700;
+
+    } 
+  
+
+  .Table tr:hover {
+    background-color: #f2f2f2;
+  }
+
+
+  .Table caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .filelist{
+    text-align: center;
+    text-decoration: underline;
+  }
+ */
+
+
+
+
+
+
+
+
+ .upload-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px dashed #3498db;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.upload-container h4 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 18px;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message.success {
+  color: #2ecc71;
+}
+
+.message.error {
+  color: #e74c3c;
+}
+
+@media (max-width: 480px) {
+  .upload-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+}

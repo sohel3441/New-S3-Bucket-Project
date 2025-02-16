@@ -1,0 +1,80 @@
+.filelist {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #cb1313;
+    text-decoration: underline  ;
+  }
+  
+  .Table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .Table th, .Table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .Table th {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .Table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .Table tr:hover {
+    background-color: #e6f7ff;
+  }
+  
+  .Table td a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .Table td a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    background-color: #e94937;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+  }
+  
+  @media (max-width: 768px) {
+    .Table {
+      width: 95%;
+    }
+  
+    .Table th, .Table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  }
+  
