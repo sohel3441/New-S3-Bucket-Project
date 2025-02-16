@@ -28,7 +28,8 @@ const Home = ({ fetchFiles }) => {
 const App = () => {
   const fetchFiles = async () => {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_API_URL}/files`);
+      // const res = await axios.get(`${import.meta.env.VITE_API_URL}/files`);
+      const res = await axios.get(`/api/files/files`)
       return res.data;
     } catch (error) {
       console.error("Error fetching files:", error);

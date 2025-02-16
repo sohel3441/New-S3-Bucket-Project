@@ -9,7 +9,8 @@ const FileList = () => {
     const fetchFiles = async () => {
       try {
         // const response = await axios.get("http://localhost:3000/api/files/files");
-              const response = await axios.get(`${import.meta.env.VITE_API_URL}/files`) 
+              // const response = await axios.get(`${import.meta.env.VITE_API_URL}/files`) 
+              const response = await axios.get(`/api/files/files`)
         setFiles(response.data);
       } catch (error) {
         console.error("Error fetching files:", error);
@@ -22,7 +23,8 @@ const FileList = () => {
   const handleDelete = async (id) => {
     try {
       // await axios.delete(`http://localhost:3000/api/files/delete/${id}`);
-      await axios.delete(`${import.meta.env.VITE_API_URL}/delete/${id}`)
+      // await axios.delete(`${import.meta.env.VITE_API_URL}/delete/${id}`);
+      await axios.delete(`/api/files/delete/${id}`);
       setFiles(files.filter((file) => file._id!== id));
     } catch (error) {
       console.error("Error deleting file:", error);
