@@ -22,10 +22,6 @@ connectDB();
 
 app.use("/api/files", router);
 
-app.get('/' , (req,res) => {
-    res.send('Hello World!')
-})
-
 export default app;
 
 const PORT = process.env.PORT || 3000;
