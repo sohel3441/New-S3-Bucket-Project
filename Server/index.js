@@ -95,7 +95,7 @@ app.use(express.json());
 app.use(cors());
 
 // OR (better) allow only specific frontend origins
-const allowedOrigins = ["http://localhost:5173", "https://react-frontend-black.vercel.app"];
+const allowedOrigins = [ process.env.FRONTEND_URI , "https://react-frontend-black.vercel.app"];
 app.use(
   cors({
     origin: allowedOrigins,
