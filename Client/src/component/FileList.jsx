@@ -9,8 +9,9 @@ const FileList = () => {
     const fetchFiles = async () => {
       try {
         // const response = await axios.get("http://localhost:3000/api/files/files");
-              const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/files`) 
+              // const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/files`) 
               // const response = await axios.get(`/api/files/files`)
+              const response = await axios.get(`https://react-backend-smoky.vercel.app/files`)
         setFiles(response.data);
       } catch (error) {
         console.error("Error fetching files:", error);
