@@ -7,16 +7,17 @@ import dotenv from "dotenv";
 import cors from "cors";
 
 //configure cors
-const corsOptions = {
-    origin: process.env.FRONTEND_URL,
-    allowedHeaders: ["Content-Type", "Authorization"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-};
+
 
 dotenv.config();
 const app = express();
-app.use(cors(corsOptions));
 app.use(express.json());
+app.use(cors({
+    origin: "https://react-frontend-git-main-shaikh-sohels-projects.vercel.app",
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization"
+  }))
+  
 
 connectDB();
 
