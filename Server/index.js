@@ -72,22 +72,35 @@ const app = express();
 app.use(express.json());
 
 // Fixed CORS configuration
-const allowedOrigins = [
-  "http://localhost:3000",
-  "https://react-frontend-git-main-shaikh-sohels-projects.vercel.app",
-  "https://react-frontend-black.vercel.app"
-];
+// const allowedOrigins = [
+//   "http://localhost:3000",
+//   "https://react-frontend-git-main-shaikh-sohels-projects.vercel.app",
+//   "https://react-frontend-black.vercel.app"
+// ];
 
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       if (!origin || allowedOrigins.includes(origin)) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//     credentials: true, // Add this if you're using cookies/sessions
+//   })
+// );
+
+
+app.use(cors());
+
+// OR (better) allow only specific frontend origins
+const allowedOrigins = ["http://localhost:5173", "https://react-frontend-black.vercel.app"];
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true, // Add this if you're using cookies/sessions
+    origin: allowedOrigins,
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true, // If you use cookies or authentication
   })
 );
 
