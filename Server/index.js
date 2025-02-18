@@ -12,8 +12,22 @@ import cors from "cors";
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "*" }));
-
+const allowedOrigins = [
+    "https://react-frontend-git-main-shaikh-sohels-projects.vercel.app",
+    "https://react-frontend-black.vercel.app"
+  ];
+  
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization"
+  }));
 
 
 connectDB();
