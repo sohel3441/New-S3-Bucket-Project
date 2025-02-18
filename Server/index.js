@@ -12,11 +12,8 @@ import cors from "cors";
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors({
-    origin: "https://react-frontend-git-main-shaikh-sohels-projects.vercel.app",
-    methods: "GET,POST,PUT,DELETE",
-    allowedHeaders: "Content-Type,Authorization"
-  }))
+app.use(cors({ origin: "*" }));
+
 
 
 connectDB();
