@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.json());
 const allowedOrigins = [
-    "https://react-frontend-git-main-shaikh-sohels-projects.vercel.app",
+    "http://localhost:3000/api/files",
     "https://react-frontend-black.vercel.app"
   ];
   
