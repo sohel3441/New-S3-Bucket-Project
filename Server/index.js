@@ -17,7 +17,7 @@ app.use(cors({
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization"
   }))
-  
+
 
 connectDB();
 
