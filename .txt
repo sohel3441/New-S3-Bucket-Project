@@ -9,4 +9,4 @@ cluster-password = uehOjZkVONLsyV01
 
 
 
-mongodb://atlas-sql-67b4e39e9f9dee613dd0f182-x9udg.a.query.mongodb.net/sample_mflix?ssl=true&authSource=admin   
+mongodb+srv://sohel3441:<db_password>@cluster0.x9udg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
