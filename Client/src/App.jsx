@@ -5,7 +5,6 @@ import FileList from "./component/FileList";
 import FileUpload from "./component/FileUpload";
 import './App.css';
 
-// const API_URL = "http://localhost:3000/api/files";
 
 const Home = ({ fetchFiles }) => {
   const navigate = useNavigate(); // Hook for navigation
@@ -29,8 +28,6 @@ const App = () => {
   const fetchFiles = async () => {
     try {
       const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/files`);
-      // const res = await axios.get(`/api/files/files`)
-      // const res = await axios.get(`https://react-backend-smoky.vercel.app/files`)
       return res.data;
     } catch (error) {
       console.error("Error fetching files:", error);
