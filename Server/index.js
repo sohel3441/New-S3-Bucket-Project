@@ -8,13 +8,8 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-// app.use(cors({
-//   origin: "http://localhost:5173", // Allow only your frontend
-//   methods: "GET, POST, PUT, DELETE",
-//   allowedHeaders: "Content-Type, Authorization"
-// }));
 app.use(cors({
-  origin: 'https://new-s3-bucket-project-frontend.onrender.com',
+  origin: 'http://localhost:5173',
   methods: 'GET,POST,PUT,DELETE,PATCH,OPTIONS',
   allowedHeaders: 'Content-Type,Authorization'
 }))
