@@ -55,5 +55,4 @@ run().catch(console.dir);
 //latest
 
 
-MONGO_URI=mongodb+srv://sohel3441:NewPassword@cluster0.x9udg.mongodb.net/File-Manager?retryWrites=true&w=majority
-DB_NAME=File-Manager
+mongodb+srv://sohel3441:sohel3441@cluster0.x9udg.mongodb.net/File-Manager?retryWrites=true&w=majority&appName=Cluster0

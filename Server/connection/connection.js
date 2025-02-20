@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
 
+dotenv.config();
 async function connectDB() {
   try {
-    await mongoose.connect('mongodb://localhost:27017/File-Manager', {
+    await mongoose.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
@@ -13,6 +15,8 @@ async function connectDB() {
 }
 
 export default connectDB;
+
+
 
 // import mongoose from 'mongoose';
 // import dotenv from 'dotenv';
