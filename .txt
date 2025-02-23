@@ -46,13 +46,8 @@ run().catch(console.dir);
 
 
 
-
-
-
-
-
-
 //latest
-
-
 mongodb+srv://sohel3441:sohel3441@cluster0.x9udg.mongodb.net/File-Manager?retryWrites=true&w=majority&appName=Cluster0
+
+
+3.109.55.211:7000
