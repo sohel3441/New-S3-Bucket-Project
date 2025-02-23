@@ -8,7 +8,7 @@ const FileList = () => {
   useEffect(() => {
     const fetchFiles = async () => {
       try {
-              const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/files`) 
+              const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/files`) 
         setFiles(response.data);
       } catch (error) {
         console.error("Error fetching files:", error);
@@ -20,7 +20,7 @@ const FileList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/delete/${id}`);
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/delete/${id}`);
       setFiles(files.filter((file) => file._id!== id));
     } catch (error) {
       console.error("Error deleting file:", error);

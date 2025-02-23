@@ -16,7 +16,7 @@ const FileUpload = ({ refreshFiles }) => {
     formData.append("file", file);
 
     try {
-      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/upload` , formData);
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/upload` , formData);
       setMessage("✅ File uploaded successfully!");
       setFile(null); // Clear file input after upload
       refreshFiles();
