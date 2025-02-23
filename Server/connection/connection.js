@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
 
-const uri = `mongodb+srv://sohel3441:sohel3441@cluster0.x9udg.mongodb.net/File-Manager?retryWrites=true&w=majority&appName=Cluster0`
+dotenv.config();
 
-async function connectDB() {
+ const connectDB = async () => {
   try {
-    await mongoose.connect(uri);
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("Connected to MongoDB");
   } catch (error) {
     console.error("MongoDB connection error:", error);
@@ -13,6 +14,7 @@ async function connectDB() {
 }
 
 export default connectDB;
+
 
 
 
