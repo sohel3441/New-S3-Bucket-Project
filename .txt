@@ -51,3 +51,5 @@ mongodb+srv://sohel3441:sohel3441@cluster0.x9udg.mongodb.net/File-Manager?retryW
 
 
 3.109.55.211:7000
+
+MONGO_URI=mongodb://127.0.0.1:27017/File-Manager
