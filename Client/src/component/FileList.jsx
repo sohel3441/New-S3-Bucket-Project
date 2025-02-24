@@ -8,7 +8,7 @@ const FileList = () => {
   useEffect(() => {
     const fetchFiles = async () => {
       try {
-              const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/files`) 
+              const response = await axios.get(`https://new-s3-bucket-project-backend.vercel.app/api/files`) 
         setFiles(response.data);
       } catch (error) {
         console.error("Error fetching files:", error);
@@ -20,7 +20,7 @@ const FileList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/delete/${id}`);
+      await axios.delete(`https://new-s3-bucket-project-backend.vercel.app/api/delete/${id}`);
       setFiles(files.filter((file) => file._id!== id));
     } catch (error) {
       console.error("Error deleting file:", error);
