@@ -18,7 +18,7 @@ app.use(cors({
 connectDB();
 
 // Your routes
-app.use("/api", router);
+app.use('/api', router);
 
 app.get('/', (req, res) => {
   res.send('API is running')
