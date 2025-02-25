@@ -17,7 +17,8 @@ const FileUpload = ({ refreshFiles }) => {
 
     try {
       // await axios.post(`https://new-s3-bucket-project-backend.vercel.app/api/upload` , formData);
-      await axios.post(`http://localhost:3000/api/upload` , formData);
+     // await axios.post(`http://localhost:3000/api/upload` , formData);
+      await axios.post(`http://35.154.24.123:3000/api/upload` , formData);
 
       setMessage("✅ File uploaded successfully!");
       setFile(null); // Clear file input after upload
