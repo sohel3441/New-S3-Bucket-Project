@@ -9,7 +9,8 @@ const FileList = () => {
     const fetchFiles = async () => {
       try {
               // const response = await axios.get(`https://new-s3-bucket-project-backend.vercel.app/api/files`) 
-              const response = await axios.get(`http://localhost:3000/api/files`) 
+             // const response = await axios.get(`http://localhost:3000/api/files`) 
+        const response = await axios.get(`http://35.154.24.123:3000/api/files`) 
 
         setFiles(response.data);
       } catch (error) {
@@ -23,8 +24,8 @@ const FileList = () => {
   const handleDelete = async (id) => {
     try {
       // await axios.delete(`https://new-s3-bucket-project-backend.vercel.app/api/delete/${id}`);
-      await axios.delete(`http://localhost:3000/api/delete/${id}`);
-
+    //   await axios.delete(`http://localhost:3000/api/delete/${id}`);
+         await axios.delete(`http://35.154.24.123:3000/api/delete/${id}`);
       setFiles(files.filter((file) => file._id!== id));
     } catch (error) {
       console.error("Error deleting file:", error);
