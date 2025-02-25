@@ -38,10 +38,14 @@ const App = () => {
     }
   };
 
+
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home fetchFiles={fetchFiles} />} />
+
+        
         <Route path="/files" element={<FileList />} />
       </Routes>
     </Router>
