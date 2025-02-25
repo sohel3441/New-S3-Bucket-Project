@@ -28,7 +28,8 @@ const App = () => {
   const fetchFiles = async () => {
     try {
       // const res = await axios.get(`https://new-s3-bucket-project-backend.vercel.app/api/files`);
-      const res = await axios.get(`http://localhost:3000/api/files`);
+    //  const res = await axios.get(`http://localhost:3000/api/files`);
+      const res = await axios.get(`http://35.154.24.123:3000/api/files`);
 
       return res.data;
     } catch (error) {
