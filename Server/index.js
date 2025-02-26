@@ -3,11 +3,15 @@ import connectDB from "./connection/connection.js";
 import router from "./routes/fileRoute.js";
 import dotenv from "dotenv";
 import cors from "cors";
+import path from 'path';
 
 dotenv.config();
 const app = express();
 
 app.use(express.json());
+const _dirname = path.dirname("");
+const buildpath = path.join(_dirname , "../Client/build")
+app.use(express.static(buildpath));
 app.use(cors({
   // origin: 'http://localhost:5173',
   origin: '*',
