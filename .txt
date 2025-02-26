@@ -53,3 +53,49 @@ mongodb+srv://sohel3441:sohel3441@cluster0.x9udg.mongodb.net/File-Manager?retryW
 3.109.55.211:7000
 
 MONGO_URI=mongodb://127.0.0.1:27017/File-Manager
+
+
+
+
+
+
+
+
+
+
+# Ignore node_modules in the Server folder
+Server/node_modules/
+
+# Ignore environment variables in the Server folder
+Server/.env
+
+# Ignore build files (if applicable)
+Server/dist/
+
+# Logs & OS files
+Server/logs/
+*.log
+.DS_Store
+
+
+
+//main gitginore files
+
+# Ignore node_modules in both Client and Server
+node_modules/
+Client/node_modules/
+Server/node_modules/
+
+# Ignore build files
+Client/build/
+Server/dist/
+
+# Ignore environment variables
+.env
+Client/.env
+Server/.env
+
+# Logs & OS files
+logs/
+*.log
+.DS_Store

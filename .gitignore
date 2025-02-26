@@ -3,9 +3,6 @@ node_modules/
 Client/node_modules/
 Server/node_modules/
 
-# Ignore build files
-Client/build/
-Server/dist/
 
 # Ignore environment variables
 .env
